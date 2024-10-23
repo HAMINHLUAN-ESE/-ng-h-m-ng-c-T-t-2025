@@ -1,0 +1,78 @@
+/* styles.css */
+
+/* Toàn trang */
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.countdown {
+  text-align: center;
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+/* Bộ đếm thời gian */
+.timer {
+  display: flex;
+  gap: 30px;
+}
+
+/* Hộp thời gian */
+.time-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 120px;
+  height: 120px;
+}
+
+/* Vòng tròn SVG */
+.circle {
+  transform: rotate(-135deg);
+}
+
+.circle circle {
+  fill: none;
+  stroke: #3498db;
+  stroke-width: 8;
+  stroke-dasharray: 339.292; /* Độ dài vòng tròn tương ứng với 270 độ */
+  stroke-dashoffset: 339.292;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 1s linear;
+}
+
+/* Văn bản ở giữa vòng tròn */
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #34495e;
+}
+
+.label {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  margin-top: 5px;
+}
